@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--폰트의 크기, 패딩, 마진 등의 사이즈를 주로 선언한다.-->
+    <dimen name="activity_margin">10dp</dimen>
+    <dimen name="dimenXml">30sp</dimen>
+
+</resources>

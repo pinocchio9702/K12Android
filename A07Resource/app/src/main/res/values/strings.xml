@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">A07Resource</string>
+
+    <!--속성추가함-->
+    <string name="xml_message">XML에서 리소스 참조</string>
+    <string name="code_message">Java코드로 리소스 참조</string>
+    <string name="button_text1">int형 배열 출력</string>
+    <string name="button_text2">String형 배열출력</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--정수형 배열 선언-->
+    <integer-array name="int_array">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+    </integer-array>
+    <!--문자열 배열 선언-->
+    <string-array name="str_array">
+        <item>BTS</item>
+        <item>레드벨벳</item>
+        <item>하이라이트</item>
+        <item>트와이스</item>
+    </string-array>
+</resources>

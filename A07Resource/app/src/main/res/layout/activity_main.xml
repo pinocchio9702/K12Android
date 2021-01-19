@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin">
+
+    <!--res폴더 하위 value폴더에 생성된 리소스 파일에서 속성값으로
+        각각의 값을 설정한다.-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/xml_message"
+        android:textSize="@dimen/dimenXml"
+        android:textColorHint="@color/colorXml"/>
+    <ImageView
+        android:layout_width="256px"
+        android:layout_height="256px"
+        android:src="@drawable/grandmother"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="하하하하하하"
+        android:id="@+id/code_textview"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/code_imageview"/><!--src속성이 없음-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1"
+            android:text="@string/button_text1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:text="@string/button_text2"/>
+    </LinearLayout>
+
+
+</LinearLayout>
