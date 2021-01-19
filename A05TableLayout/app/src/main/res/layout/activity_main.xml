@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#ff0000">
+        <!--각 커럼에 배치된 버튼의 가로폭/세로폭 지정시 match_parent가
+        적용되지 않는다. wrap_content가 디폴트로 적용된다.-->
+        <TableRow>
+            <Button android:text="1행1열"/>
+            <Button android:text="1행2열"/>
+            <Button android:text="1행3열"/>
+        </TableRow>
+        <!--
+        테이블 레이아웃은 표처럼 사용되는 레이아웃이므로 아래쪽에서
+        적용된 크기가 위쪽에도 영향을 미친다. 2행1열이 200dp이므로 1 행1열도
+        동일하게 적용된다.
+        -->
+        <TableRow>
+            <Button android:text="2행1열"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"/>
+            <!--height를 match_parent로 적용하더라도 부모 레이아웃을
+            꽉 채우진 않는다. 또한 width도 적용되지 않는다. 테이블 레이아웃은
+            숫자로 지정된 크기만 적용된다.-->
+            <Button android:text="2행2열"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+        </TableRow>
+    </TableLayout>
+
+    <!--
+    stretchColumns : 인덱스로 지정한 열의 너비를 늘릴때 사용하는
+        속성으로 *를 사용하면 모든 열을 늘리라는 의미이므로 동일한
+        크기로 지정된다. 특정 열을 늘리고 싶을땐 인덱스를 사용하는데
+        0부터 시작한다. 가중치(layout_weight)와 비슷한 속성으로
+        보며된다.
+    -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00ff00"
+        android:stretchColumns="*">
+        <!--*을 부여했으므로 모든 열의 크기가 동일하게 설정된다. 또한
+        match_parent로 레이아웃을 꽉 채운 효과가 적용된다.-->
+        <TableRow>
+            <Button android:text="1행1열"/>
+            <Button android:text="1행2열"/>
+            <Button android:text="1행3열"/>
+        </TableRow>
+        <TableRow>
+            <Button android:text="2행1열"/>
+            <Button android:text="2행2열"/>
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0000ff"
+        android:stretchColumns="1,2">
+        <TableRow>
+            <Button android:text="1행1열"/>
+            <Button android:text="1행2열"/>
+            <Button android:text="1행3열"/>
+        </TableRow>
+        <TableRow>
+            <Button android:text="2행1열"/>
+            <Button android:text="2행2열"/>
+        </TableRow>
+    </TableLayout>
+    <!--
+    layout_span : 열을 합칠때 사용하는 속성으로
+    -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7899a7"
+        android:stretchColumns="1">
+        <TableRow>
+            <Button android:text="1행1열"/>
+            <Button android:text="1행2열"/>
+            <Button android:text="1행3열"/>
+        </TableRow>
+        <TableRow>
+            <Button android:text="2행1열"/>
+            <Button android:text="2행2열" android:layout_span="2"/>
+        </TableRow>
+    </TableLayout>
+    <!--
+    Layout_span : 아래처럼 버튼을 오른쪽으로 배치하기 위해 1행을
+        마치 4행처럼 만들어주는 효과가 적용된다.
+    Layout_column : 해당 인덱스에 버튼을 배치한다. 인덱스는 0부터
+        시작하므로 3번째열에 "확인"버튼이 배치된다.
+    -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="#ffff00"
+        android:stretchColumns="1">
+        <TableRow>
+            <TextView android:text="이름"
+                android:textSize="15dp"
+                android:layout_height="50dp"/>
+            <EditText android:id="@+id/edit_name"
+                android:hint="이름입력"
+                android:layout_height="50dp"
+                android:layout_span="3"/>
+        </TableRow>
+        <TableRow>
+            <Button android:text="확인" android:layout_column="2"/>
+            <Button android:text="최소" />
+        </TableRow>
+    </TableLayout>
+
+
+</LinearLayout>
