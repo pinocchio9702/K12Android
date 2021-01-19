@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--
+    그리드 레이아웃 : 행과 열을 미리 정의해두고 위젯을 배치하는
+        형태의 레이아웃이다.
+        rowCount : 행의 갯수
+        columnCount : 열이 갯수
+
+        배치는 좌->우가 디폴트이고, 더이상 공간이 없다면
+        하단으로 내려가서 배치된다.
+
+        Layout_gravity
+            fill : 가로/세로 여백에 상관없이 채울때 사용
+            fill_horizontal : 가로 여백을 채워줌
+            fill_vertical : 세로 여백을 채워줌
+    -->
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="2"
+        android:columnCount="3"
+        android:background="#ff0000">
+
+        <Button android:text="1행 1열"/>
+        <Button android:text="1행 2열"/>
+        <Button android:text="1행 3열" android:layout_gravity="fill"/>
+        <Button android:text="2행 1열"/>
+        <Button android:text="2행 2열"/>
+        <Button android:text="2행 3열"
+                android:layout_gravity="fill_horizontal"/>
+
+    </GridLayout>
+    <!--
+    아래 배치된 버튼들은 Layout_gravity 속성이 없으므로 wrap_content로
+    디폴트 선언되어 컨턴츠의 크기만큼 영역을 차지한다.
+
+    orientation 속성이 vertical 이면 상 -> 하 순서로 위젯을 배치한다.
+    -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:background="#00ff00">
+
+        <Button android:text="1행 1열[1]"
+                android:layout_width="200dp"
+                android:layout_height="100dp"/>
+        <Button android:text="1행 2열[2]"
+                android:layout_gravity="fill"/>
+        <Button android:text="2행 1열[3]"
+            android:layout_height="100dp"
+            android:layout_gravity="fill_horizontal"/>
+        <Button android:text="2행 2열[4]"
+            android:layout_gravity="fill"/>
+
+    </GridLayout>
+
+    <!--
+    Layout_columnSpan : 열을 병합할때 사용
+    Layout_rowSpan : 행을 병합할때 사용
+    -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:background="#0000ff">
+
+        <Button android:text="1행 1열"
+            android:layout_width="150dp"
+            android:layout_height="100dp"/>
+        <Button android:text="1행 2열"
+            android:layout_height="100dp"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill" />
+        <Button android:layout_rowSpan="2"
+            android:layout_gravity="fill"
+            android:text="2행 1열"/>
+        <Button android:text="2행 2열"/>
+        <Button
+            android:layout_gravity="fill"
+            android:text="2행3열"/>
+        <Button android:text="3행 2열" />
+        <Button
+            android:layout_gravity="fill"
+            android:text="3행 3열" />
+
+    </GridLayout>
+    <!--Layout_columnSpan이 사용된 위치에 따라 가중치를 부여한것과
+        비슷한 효과가 적용된다.-->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:background="#000000">
+
+        <Button android:text="1" android:layout_width="100dp"/>
+        <Button android:text="2" android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"/>
+        <Button android:text="3"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"/>
+        <Button android:text="4" android:layout_width="100dp"/>
+    </GridLayout>
+
+
+
+</LinearLayout>
