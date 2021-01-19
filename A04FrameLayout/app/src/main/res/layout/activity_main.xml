@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--
+    프레임 레이아웃 : 다른 레이아웃과는 다르게 배치를 위한 레이아웃이
+            아니라 뷰를 중첩하기 위한 목적의 레이아수으로 가장 상위의 뷰
+            혹은 뷰그룹만 화면에 보이는 특징이 있다. 주로 뷰를 전환하여
+            출력하기 위한 용도로 사용된다.-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff0000"
+        android:text="큰버튼"/>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="#00ff00"
+        android:text="중간버튼"/>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="#0000ff"
+        android:text="작은버튼(두번째화면으로 이동)"
+        android:textColor="#ffffff"
+        android:id="@+id/btn_second"/>
+</FrameLayout>
