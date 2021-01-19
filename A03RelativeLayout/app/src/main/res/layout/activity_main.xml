@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#2bca12">
+        <!-- 상대 레이아웃 : 기준이 되는 레이아웃 혹은 위젯을 두고
+            상대적인 위치를 설정하면서 배치하는 방식의 레이아웃 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--첫번째 라인-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1좌측-상단"/><!--디폴트 배치-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="2중앙-상단"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="3우측 상단"/>
+            <!-- 두번째 라인-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="4좌측-중앙"/><!--수직방향에서 가운데정렬-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="5정중앙"/><!--부모레이아웃에서 정중앙-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="6우측-중앙"/><!--부모레이아웃에서 우측정렬-->
+            <!-- 세번째 라인-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="7좌측-하단"/><!--부모레이아웃에서 하단정렬-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="8중앙-하단"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:text="9우측-하단"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <!--두번째 영역-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#cf7878">
+        <!--두번째 영역-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--기준이 되는 버튼을 생성한 후 나머지 버튼을 배치한다.-->
+            <Button
+                android:id="@+id/btn_center"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:text="중앙기준버튼"/><!--기준버튼은 id속성을 반드시
+                                    부여해야 한다.-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/btn_center"
+                android:layout_alignTop="@+id/btn_center"
+                android:text="가"/><!--기준의 좌측상단-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/btn_center"
+                android:layout_alignBaseline="@+id/btn_center"
+                android:text="나"/><!--기준의 좌측중앙 -->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/btn_center"
+                android:layout_alignBottom="@+id/btn_center"
+                android:text="다"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btn_center"
+                android:layout_alignRight="@+id/btn_center"
+                android:text="라"
+                android:id="@+id/btn_ra"/><!--상단은 주로 top을 사용하지만
+                        above를 사용했음에 유의-->
+            <!--중앙버튼의 상단우측에 위치하고, 또한 '마' 버튼의
+                기준이 되므로 id속성을 부여한다.-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="마"
+                android:layout_toRightOf="@+id/btn_ra"
+                android:layout_alignTop="@+id/btn_ra"/>
+            <!--'라'버튼을 기준으로 우측에 위치-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="바"
+                android:layout_toRightOf="@+id/btn_center"
+                android:layout_alignBottom="@+id/btn_center"
+                android:id="@+id/byn_ba"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사"
+                android:layout_below="@+id/btn_center"
+                android:layout_alignLeft="@+id/btn_center"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아"
+                android:layout_below="@+id/byn_ba"
+                android:layout_alignRight="@+id/byn_ba"/><!--아래는 주로
+                        bottom을 사용하지만 여기서는 below를 사용했음에 유의-->
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
