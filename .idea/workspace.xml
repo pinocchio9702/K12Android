@@ -38,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/A09CompoundButton" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="SvnConfiguration">
@@ -79,16 +79,18 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="K12Android_01" />
     <option name="LAST_COMMIT_MESSAGE" value="K12Android_01" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="702" y="277" key="FileChooserDialogImpl" timestamp="1610966186477">
+    <state x="702" y="277" key="FileChooserDialogImpl" timestamp="1611115737888">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="702" y="277" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610966186477" />
+    <state x="702" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1611115737888" />
     <state x="146" y="102" key="MergeDialog" timestamp="1610966328993">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
