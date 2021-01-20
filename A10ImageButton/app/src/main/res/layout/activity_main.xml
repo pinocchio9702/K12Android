@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp">
+   <!--
+       이미지 버튼을 사용하기 위해서 app네임스페이스를
+       부모 레이아웃에 추가해야 한다.(기본으로 추가되어 있음)
+       app네임스페이스를 통해 srcCompat속성을 사용할 수 있다.
+   -->
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        app:srcCompat="@drawable/btn_change"/>
+    <!--scrCompat 속성에 정의된 xml리소스 파일에 의해 버튼의
+    클릭, 포커스 등의 효과를 부여할 수있다.-->
+
+    <!--백그라라운드 속성으로 이미지를 지정하면 입력한 텍스트만큼
+    길이가 자동으로 늘어난다.-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="백그라운드버튼..텍스트길이 만큼 늘어나요!!"
+        android:padding="13dp"
+        android:textSize="15dp"
+        android:background="@drawable/background_change"/>
+
+    <!--
+        background속성 : png이미지를 사용할때 배경색을 투명하게
+            하더라도 회색여백이 보여지는 경우 @null로 설정하면
+            배경이 사라져 투명하게 보이게 된다.
+    -->
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/stop_change"
+        android:layout_marginTop="50dp"
+        android:background="@null"/>
+
+
+</LinearLayout>
