@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--
+    orderInCategory : 옵션메뉴의 순서 지정
+    showAsAction : 액션바에 메뉴를 표시하는 옵션
+        -always : 메뉴를 항상 표시한다.
+        -witText : 공간의 여유가 있으면 텍스트도 같이 표시한다.
+    -->
+    <item
+        android:id="@+id/optmenu_1"
+        android:title="옵션메뉴1[XML]"
+        android:icon="@drawable/away"
+        android:orderInCategory="1"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/optmenu_2"
+        android:title="옵션메뉴2[XML]"
+        android:icon="@drawable/busy"
+        android:orderInCategory="2"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/optmenu_3"
+        android:title="옵션메뉴3[XML]"
+        android:icon="@drawable/offline"
+        android:orderInCategory="3"
+        app:showAsAction="always|withText"
+        />
+    <item
+        android:id="@+id/bg_red"
+        android:title="RED"
+        android:orderInCategory="4"
+        />
+    <item
+        android:id="@+id/bg_green"
+        android:title="GREEN"
+        android:orderInCategory="5"/>
+    <item
+        android:id="@+id/bg_blue"
+        android:title="BLUE"
+        android:orderInCategory="6"/>
+    <item
+        android:id="@+id/submenu"
+        android:title="이미지 변환"
+        android:orderInCategory="7">
+        <!--서브메뉴형태로 출력하고자 할때는 1Depth를 더 추가하여
+            아래와 같이 기술한다.-->
+        <menu>
+            <item
+                android:id="@+id/image_rotation"
+                android:title="90도 회전"/>
+            <item
+                android:id="@+id/image_scale_inc"
+                android:title="2배확대" />
+            <item
+                android:id="@+id/image_scale_desc"
+                android:title="2배축소"/>
+
+        </menu>
+    </item>
+
+
+</menu>
