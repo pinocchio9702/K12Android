@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kosmo.a15intro">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.A15Intro">
+        <!--
+            <activity 하위 엘리먼트인 <intent-filter 를
+            .intro 하위로 이동한다.
+            해당 엘리먼트를 가진 액티비티가 가장 먼저 실행된다.
+        -->
+        <activity
+            android:name=".intro">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"></activity>
+    </application>
+
+</manifest>
