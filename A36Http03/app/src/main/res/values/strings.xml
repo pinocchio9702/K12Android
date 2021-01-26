@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">A36Http03</string>
+
+    <string name="server_addr">http://192.168.0.4:8080</string>
+</resources>
