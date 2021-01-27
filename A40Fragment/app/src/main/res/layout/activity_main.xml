@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <!--Top 영역-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <!--XML로 프레그먼트를 삽입한다. fragment태그를 사용하고,
+        이처럼 하면 해당 XML을 붙여넣기 한것과 동일하다.-->
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/torFragment"
+            class="com.kosmo.a40fragment.TopFragment"/>
+        <!--프레그먼트로 사용할 클래스를 패키지명을 포함하여 기술-->
+    </LinearLayout>
+    <!--Bottom 영역 : 프레그먼트를 통해 각 화면(RGB)을 구성한다. 여기서는
+        JAVA코드를 통해 프레그먼트를 삽입한다.-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="horizontal"
+        android:id="@+id/bottomLayout">
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

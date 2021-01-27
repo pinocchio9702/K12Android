@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <!--TOP영역의 레이아웃으로 화면전화을 위한 버튼으로 구성됨.
+    3개의 버튼인 동일한 크기로 출력되도록 가중치를 적용하고 있다.-->
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/btnFirstFragment"
+        android:text="화면1"/>
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/btnSecondFragment"
+        android:text="화면2"/>
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/btnThirdFragment"
+        android:text="화면3"/>
+
+</LinearLayout>
