@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onBtn2Clicked(View v) {
-        //Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
+        startActivity(intent);
     }
 
     //음성인식 리스너 정의
